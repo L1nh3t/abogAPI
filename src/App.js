@@ -4,6 +4,8 @@ import './App.css';
 import Saludo from './components/saludo';
 import navbar from './components/navbar';
 import Box from '@material-ui/core/Box';
+// import { BrowserRouter, Route, Link } from "react-router-dom";
+
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,6 +16,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import  {HomePage} from  './Pages/Home/home.js';
 import {Login} from './Pages/Login/Login.js';
 import {details} from './Pages/Details/details.js';
+import { Route } from 'react-router-dom';
 
 
 // function App(){
@@ -29,9 +32,15 @@ function App (){
   return (
     
     <div className='App'>
+    <Route path = "/">
     <HomePage></HomePage>
+    </Route>
+    <Route path ="/">
     <Login></Login>
+    </Route>
+    <Route exact path ="/details">
     <details></details>
+    </Route>
   
     </div>
   )
