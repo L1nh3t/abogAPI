@@ -13,10 +13,12 @@ import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-import  {HomePage} from  './Pages/Home/home.js';
+import  HomePage from  './Pages/Home/home.js';
 import {Login} from './Pages/Login/Login.js';
 import {details} from './Pages/Details/details.js';
 import { Route } from 'react-router-dom';
+
+import NavBar from "./"
 
 
 // function App(){
@@ -30,18 +32,15 @@ import { Route } from 'react-router-dom';
 
 function App (){
   return (
-    
+
     <div className='App'>
-    <Route path = "/">
-    <HomePage></HomePage>
-    </Route>
-    <Route path ="/">
-    <Login></Login>
-    </Route>
+    <Route path = "/login" exact component={Login}/>
+    <Route path ="/" exact component={HomePage}/>
+
     <Route exact path ="/details">
     <details></details>
     </Route>
-  
+
     </div>
   )
 }
