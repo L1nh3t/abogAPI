@@ -3,11 +3,16 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const moviesSchema = new Schema({
-    title: String,
-    genre: String,
-    year: Number,
+
+
+const cliente = new Schema({
+  nombre: String,
+  correo: String,
+  numero: Number,
+  areaDeInteres: String,
 })
+
+const Clientes = mongoose.model("Clientes",cliente)
 
 // genre: {
 //     type:String,
@@ -26,8 +31,7 @@ const moviesSchema = new Schema({
 // }
 // },{ timestamps:true })
 
-const Movies = mongoose.model("Movies",moviesSchema);
 
 module.exports = {
-    Movies
+    Clientes
 }
