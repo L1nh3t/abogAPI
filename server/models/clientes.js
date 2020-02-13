@@ -5,14 +5,14 @@ const Schema = mongoose.Schema;
 
 
 
-const cliente = new Schema({
+const clientesSquema = new Schema({
   nombre: String,
   correo: String,
   numero: Number,
   areaDeInteres: String,
 })
 
-const Clientes = mongoose.model("Clientes",cliente)
+const Clientes = mongoose.model("Clientes",clientesSquema)
 
 // genre: {
 //     type:String,
