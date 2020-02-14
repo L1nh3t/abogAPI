@@ -3,6 +3,14 @@ import {
   Card, Button, CardImg, CardTitle, CardText, CardGroup,
   CardSubtitle, CardBody
 } from 'reactstrap';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 const CardLawyer = (props) => {
   return (
     <CardGroup>
@@ -11,7 +19,9 @@ const CardLawyer = (props) => {
         <CardBody>
           <CardTitle>Fiscal</CardTitle>
           <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <Button>Ver abogaods</Button>
+            <Link to="/lawyers"> 
+              <Button>Ver abogaods</Button>
+            </Link>
         </CardBody>
       </Card>
       <Card>

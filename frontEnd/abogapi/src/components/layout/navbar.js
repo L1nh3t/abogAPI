@@ -42,7 +42,7 @@ const NavBar = (props) => {
               <NavLink href="/components/">Servicios</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">Abogados</NavLink>
+              <NavLink href="">Abogados</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/components/">Clientes</NavLink>

@@ -13,8 +13,6 @@ const Footer = (props) => {
       <p>Colonia Juárez</p>
       <p>Ciudad de México, México</p>
     </div>
-
-
     </footer>
     </div>
 

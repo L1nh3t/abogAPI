@@ -10,18 +10,24 @@ import axios from "axios"
      axios.get("https://boiling-peak-23962.herokuapp.com/clientes/all")
      .then(res => {
        console.log('Data de peticion: \n', res.data);
-       this.state({clientes:res.data});
+       this.setState({clientes:res.data});
      })
      .catch( error =>{
-       console.log(error.status)
+       console.log(error)
        console.log("error hola")
      })
+   }
+
+   renderLawyers(){
+    return this.state.clientes.map( abogado => {
+      return <h1>{abogado.nombre}</h1>
+    })
    }
 
    render() {
      return(
      <div>
-        
+        { this.renderLawyers( ) }
      </div>
    )}
  }
