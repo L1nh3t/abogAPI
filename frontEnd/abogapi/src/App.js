@@ -8,8 +8,14 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import  HomePage from  './Pages/Home/home.js';
 import {Login} from './Pages/Login/Login.js';
+import Somos from './components/quienesSomos.js';
 import {details} from './Pages/Details/details.js';
-import { Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 import NavBar from "./"
 
@@ -18,11 +24,13 @@ function App (){
 
     <div className='App'>
     <Route path = "/login" exact component={Login}/>
-    <Route path ="/" exact component={HomePage}/>
+    <Route path="/">
+      <HomePage />
+     </Route>
+     <Route exact path="/somos" component={Somos} />
     <Route exact path ="/details">
     <details></details>
     </Route>
-
     </div>
   )
 }

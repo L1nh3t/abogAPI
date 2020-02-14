@@ -13,6 +13,13 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,30 +29,39 @@ const NavBar = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">¿Quienes somos?</NavbarBrand>
+        <img></img>
+        <NavbarBrand>
+         <Link to="/somos">Nosotros</Link>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Nuestra mision</NavLink>
+              <NavLink href="/components/">Servicios</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="https://github.com/reactstrap/reactstrap">Abogados</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/components/">Clientes</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://github.com/reactstrap/reactstrap">Contacto</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                Areas
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
+                  Derecho Fiscal
                 </DropdownItem>
                 <DropdownItem>
-                  Option 2
+                  Derecho Civil
                 </DropdownItem>
-                <DropdownItem divider />
+
                 <DropdownItem>
-                  Reset
+                  Derecho Laboral
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
