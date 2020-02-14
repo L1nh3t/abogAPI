@@ -1,13 +1,11 @@
 import React from 'react';
 import Layout from "../../components/layout/layout";
-
+import ContainerAbogados from "./../../components/petitions/abogapi"
 export default function HomePage(){
   return(
-        <Layout>
-          <h1>
-              Este es
-          </h1>
-          </Layout>
-
+      <div>
+        <Layout/> {/* Aqui despliega navbar */}
+        <ContainerAbogados/>
+      </div>
 );
 }
