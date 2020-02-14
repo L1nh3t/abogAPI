@@ -29,9 +29,11 @@ const NavBar = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <img></img>
+        <div>
+          <img src ="./favicon.ico"></img>
+        </div>
         <NavbarBrand>
-         <Link to="/somos">Nosotros</Link>
+         <Link to="/somos"> Nosotros</Link>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -66,7 +68,6 @@ const NavBar = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
         </Collapse>
       </Navbar>
     </div>

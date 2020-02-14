@@ -4,7 +4,7 @@ export class Somos extends Component {
     render (){
         return (
             <h1>
-                Hola desde componente Saludo
+                Somos una empreza que se encarga de conectar a abogados de calidad con clientes
             </h1>
         )
     }
