@@ -6,8 +6,6 @@ import {
 
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 
@@ -18,9 +16,9 @@ const CardLawyer = (props) => {
         <CardImg top width="100%" src="https://concepto.de/wp-content/uploads/2019/10/derecho-fiscal-tributario-e1571610602568.jpg" alt="Card image cap" />
         <CardBody>
           <CardTitle>Fiscal</CardTitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-            <Link to="/lawyers"> 
-              <Button>Ver abogaods</Button>
+          <CardText>Nuestros abogados en materia fiscal son de los mejores en el mercado a nivel nacional e internacional.</CardText>
+            <Link to="/lawyers">
+              <Button>Ver abogados</Button>
             </Link>
         </CardBody>
       </Card>
@@ -29,8 +27,10 @@ const CardLawyer = (props) => {
         <CardBody>
           <CardTitle>Civil</CardTitle>
 
-          <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
-          <Button>Ver abogaods</Button>
+          <CardText>Nuestros abogados se distingen por el exelente servio que brindan, ya que cada cliente recibe atención personalizada.</CardText>
+          <Link to="/lawyers">
+              <Button>Ver abogados</Button>
+            </Link>
         </CardBody>
       </Card>
       <Card>
@@ -38,8 +38,10 @@ const CardLawyer = (props) => {
         <CardBody>
           <CardTitle>Laboral</CardTitle>
 
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
-          <Button>Ver abogaods</Button>
+          <CardText>Tenemos un reconocido cuerpo de abogados especializados en Derecho Laboral.</CardText>
+          <Link to="/lawyers">
+              <Button>Ver abogados</Button>
+            </Link>
         </CardBody>
       </Card>
     </CardGroup>

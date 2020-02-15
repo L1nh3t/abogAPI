@@ -1,5 +1,13 @@
 import React,{Component} from "react"
 import axios from "axios"
+import {
+  Card, Button, CardImg, CardTitle, CardText, CardGroup,
+  CardSubtitle, CardBody
+} from 'reactstrap';
+import {
+  Link,
+} from "react-router-dom";
+
 
  export default class ContainerAbogados extends Component{
    state = {
@@ -7,7 +15,7 @@ import axios from "axios"
    }
    componentDidMount(){
      console.log("Componente montado");
-     axios.get("https://boiling-peak-23962.herokuapp.com/clientes/all")
+     axios.get("https://boiling-peak-23962.herokuapp.com/abogados/all")
      .then(res => {
        console.log('Data de peticion: \n', res.data);
        this.setState({clientes:res.data});
@@ -20,14 +28,23 @@ import axios from "axios"
 
    renderLawyers(){
     return this.state.clientes.map( abogado => {
-      return <h1>{abogado.nombre}</h1>
+        return(
+          <Card>
+            <CardBody>
+              <CardTitle>{abogado.nombre}</CardTitle>
+              <CardText>Nuestros abogados en {abogado.areaLaboral}</CardText>
+                <Link to="/lawyers">
+                  <Button>Contratar abogados</Button>
+                </Link>
+            </CardBody>
+          </Card>)
     })
    }
 
    render() {
      return(
      <div>
-        { this.renderLawyers( ) }
+        { this.renderLawyers() }
      </div>
    )}
  }
